@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lekha | Retail Billing Cloud</title>
+    <meta
+      name="description"
+      content="Lekha is a retail billing platform with POS, inventory, branch controls, multilingual workflows, and invoice-linked due collections."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <div class="ambient-orb ambient-orb--left"></div>
+      <div class="ambient-orb ambient-orb--right"></div>
+      <header class="site-header">
+        <div class="container nav">
+          <div class="brand">
+            <div class="brand-mark">L</div>
+            <div>
+              <p class="brand-title">Lekha</p>
+              <p class="brand-subtitle">Retail Billing Cloud</p>
+            </div>
+          </div>
+          <button class="ghost-button" type="button" data-scroll-target="demo-request">
+            Request Demo
+          </button>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero container">
+          <div class="hero-copy">
+            <p class="eyebrow">Built for Indian retailers with GST billing and collections</p>
+            <h1>Retail billing, inventory, and dues in one clean system.</h1>
+            <p class="hero-text">
+              A modern billing platform for Indian shops that need faster checkout, cleaner stock control,
+              and better branch visibility without clutter.
+            </p>
+            <div class="hero-actions">
+              <button class="primary-button" type="button" data-scroll-target="demo-request">
+                Book a Live Demo
+              </button>
+              <button class="ghost-button" type="button" data-scroll-target="visual-feature-grid">
+                Explore Features
+              </button>
+            </div>
+            <div class="hero-stats" id="hero-stats"></div>
+          </div>
+
+          <div class="hero-panel">
+            <div class="hero-visual">
+              <div class="hero-visual-badge">For retail counters, back office, and branch owners</div>
+              <img class="hero-image" src="./assets/hero-dashboard.svg" alt="Lekha dashboard, billing, and branch-control interface" />
+              <div class="floating-note floating-note--top">
+                <strong>Fast checkout</strong>
+                <span>Products, tax, and payment mode in one simple flow.</span>
+              </div>
+              <div class="floating-note floating-note--bottom">
+                <strong>Track every due</strong>
+                <span>Invoice-linked collections with staff-level accountability.</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="container section compare-section">
+          <div class="section-heading centered compact">
+            <p class="eyebrow">Why It Stands Out</p>
+            <h2>Most billing apps stop at invoices. Lekha continues into real retail operations.</h2>
+          </div>
+          <div class="compare-grid" id="compare-grid"></div>
+        </section>
+
+        <section class="container section showcase-strip">
+          <article class="showcase-card reveal-up">
+            <img src="./assets/billing-showcase.svg" alt="Billing POS workflow illustration" />
+            <div class="showcase-copy">
+              <p class="eyebrow">Visual Flow</p>
+              <h2>Fast billing without a crowded screen.</h2>
+              <p>Keep product search, payment mode, and GST-ready billing easy for the person at the counter.</p>
+            </div>
+          </article>
+          <article class="showcase-card showcase-card--reverse reveal-up">
+            <img src="./assets/control-showcase.svg" alt="Branch and team control illustration" />
+            <div class="showcase-copy">
+              <p class="eyebrow">Control & Visibility</p>
+              <h2>Know what each branch, product, and user is doing.</h2>
+              <p>Manage shops, orders, products, dues, and operators from one neat business view.</p>
+            </div>
+          </article>
+        </section>
+
+        <section class="container section">
+          <div class="section-heading centered compact">
+            <p class="eyebrow">Features</p>
+            <h2>Designed around the workflows retail teams actually use every day.</h2>
+          </div>
+          <div class="visual-feature-grid" id="visual-feature-grid"></div>
+        </section>
+
+        <section class="container section">
+          <div class="section-heading centered compact">
+            <p class="eyebrow">Modules</p>
+            <h2>Core retail workflows without unnecessary screens.</h2>
+          </div>
+          <div class="module-grid" id="module-grid"></div>
+        </section>
+
+        <!-- <section class="container section">
+          <div class="section-heading">
+            <p class="eyebrow">Pricing</p>
+            <h2>Simple plans for single-store teams and growing retail groups.</h2>
+            <p>
+              Choose a setup that fits your billing volume, team size, and branch visibility needs.
+            </p>
+          </div>
+          <div class="pricing-grid" id="pricing-grid"></div>
+          <p class="comparison-note" id="comparison-note"></p>
+        </section> -->
+
+        <section class="container section demo-section" id="demo-request">
+          <div class="demo-info reveal-up">
+            <p class="eyebrow">Demo Request</p>
+            <h2>Tell us about your store and we’ll tailor the walkthrough.</h2>
+            <p>
+              We’ll show the exact workflows your team cares about most: billing speed, inventory,
+              dues, returns, and shop-wise control.
+            </p>
+
+            <div class="contact-list" id="contact-list"></div>
+          </div>
+
+          <form class="demo-form reveal-up" id="demo-form">
+            <label>
+              <span>Name</span>
+              <input type="text" name="name" placeholder="Your full name" required />
+            </label>
+            <label>
+              <span>Business Name</span>
+              <input type="text" name="businessName" placeholder="Store or company name" required />
+            </label>
+            <label>
+              <span>Phone</span>
+              <input type="text" name="phone" placeholder="10-digit mobile number" required />
+            </label>
+            <label>
+              <span>Email</span>
+              <input type="email" name="email" placeholder="name@business.com" required />
+            </label>
+            <label>
+              <span>City</span>
+              <input type="text" name="city" placeholder="Your city" required />
+            </label>
+            <label>
+              <span>Team Size</span>
+              <input type="text" name="teamSize" placeholder="Eg. 4 staff / 2 branches" required />
+            </label>
+            <label class="full-width">
+              <span>Interested Plan</span>
+              <select name="planInterest" id="plan-interest"></select>
+            </label>
+            <label class="full-width">
+              <span>What should we focus on?</span>
+              <textarea
+                name="notes"
+                rows="5"
+                placeholder="Billing speed, branch control, stock, due collections, or anything else."
+              ></textarea>
+            </label>
+            <button class="primary-button full-width" type="submit" id="demo-submit">
+              Request Demo
+            </button>
+            <p class="form-status" id="form-status"></p>
+          </form>
+        </section>
+
+      </main>
+
+      <footer class="site-footer">
+        <div class="container footer-content">
+          <p>© 2026 Lekha. Built for growing retail teams.</p>
+          <div class="footer-links" id="footer-links"></div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="./content.js"></script>
+    <script src="./script.js"></script>
+  </body>
+  </html>

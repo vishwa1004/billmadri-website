@@ -1,0 +1,25 @@
+<svg width="720" height="540" viewBox="0 0 720 540" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="720" height="540" rx="34" fill="#FFFDF9"/>
+  <rect x="26" y="26" width="668" height="488" rx="28" fill="#F8F2E8" stroke="#E8DECF" stroke-width="2"/>
+  <rect x="66" y="68" width="588" height="84" rx="24" fill="#FFFFFF"/>
+  <text x="94" y="118" fill="#2F2417" font-family="Arial, sans-serif" font-size="30" font-weight="700">Branch &amp; Team Control</text>
+  <rect x="66" y="184" width="250" height="276" rx="24" fill="#FFFDF9" stroke="#E8DECF"/>
+  <rect x="350" y="184" width="304" height="132" rx="24" fill="#2F2417"/>
+  <rect x="350" y="328" width="304" height="132" rx="24" fill="#FFFDF9" stroke="#E8DECF"/>
+  <circle cx="116" cy="240" r="18" fill="#D96D3A"/>
+  <circle cx="116" cy="302" r="18" fill="#346B57"/>
+  <circle cx="116" cy="364" r="18" fill="#E2A057"/>
+  <text x="150" y="247" fill="#2F2417" font-family="Arial, sans-serif" font-size="20" font-weight="700">Org Admin</text>
+  <text x="150" y="272" fill="#6F614F" font-family="Arial, sans-serif" font-size="16">See all branches</text>
+  <text x="150" y="309" fill="#2F2417" font-family="Arial, sans-serif" font-size="20" font-weight="700">Shop User</text>
+  <text x="150" y="334" fill="#6F614F" font-family="Arial, sans-serif" font-size="16">Work branch-wise</text>
+  <text x="150" y="371" fill="#2F2417" font-family="Arial, sans-serif" font-size="20" font-weight="700">Collections</text>
+  <text x="150" y="396" fill="#6F614F" font-family="Arial, sans-serif" font-size="16">Track dues per invoice</text>
+  <text x="384" y="224" fill="#DCC8AF" font-family="Arial, sans-serif" font-size="14" letter-spacing="1.4">SHOP FILTER</text>
+  <rect x="384" y="244" width="236" height="44" rx="14" fill="#4A3728"/>
+  <text x="406" y="272" fill="#FFF7EF" font-family="Arial, sans-serif" font-size="18">Athani Main Branch</text>
+  <text x="384" y="372" fill="#9F8D77" font-family="Arial, sans-serif" font-size="14" letter-spacing="1.4">REPORTS &amp; USERS</text>
+  <rect x="384" y="394" width="72" height="34" rx="12" fill="#E9F2ED"/>
+  <rect x="470" y="394" width="72" height="34" rx="12" fill="#F9E9DD"/>
+  <rect x="556" y="394" width="72" height="34" rx="12" fill="#EFE6D9"/>
+</svg>

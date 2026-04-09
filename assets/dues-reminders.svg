@@ -1,0 +1,17 @@
+<svg width="720" height="520" viewBox="0 0 720 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="720" height="520" rx="30" fill="#FFFDF9"/>
+  <rect x="24" y="24" width="672" height="472" rx="26" fill="#F8F2E8" stroke="#E8DECF" stroke-width="2"/>
+  <rect x="56" y="76" width="284" height="368" rx="24" fill="#2F2417"/>
+  <rect x="88" y="120" width="220" height="44" rx="14" fill="#4B392B"/>
+  <rect x="88" y="188" width="220" height="96" rx="18" fill="#FFF5EB"/>
+  <text x="110" y="218" fill="#2F2417" font-family="Arial, sans-serif" font-size="14" letter-spacing="1.2">CUSTOMER DUE</text>
+  <text x="110" y="254" fill="#D96D3A" font-family="Arial, sans-serif" font-size="34" font-weight="700">₹8,450</text>
+  <text x="110" y="277" fill="#6F614F" font-family="Arial, sans-serif" font-size="16">Invoice and payment history</text>
+  <rect x="88" y="308" width="220" height="92" rx="18" fill="#E2F0E9"/>
+  <text x="110" y="344" fill="#346B57" font-family="Arial, sans-serif" font-size="24" font-weight="700">Reminder sent</text>
+  <text x="110" y="372" fill="#4C6B5E" font-family="Arial, sans-serif" font-size="16">WhatsApp + follow-up note</text>
+  <circle cx="500" cy="180" r="74" fill="#FFF5EB"/>
+  <path d="M500 122C467.967 122 442 147.967 442 180C442 212.033 467.967 238 500 238C532.033 238 558 212.033 558 180C558 147.967 532.033 122 500 122ZM500 138C523.196 138 542 156.804 542 180C542 203.196 523.196 222 500 222C476.804 222 458 203.196 458 180C458 156.804 476.804 138 500 138ZM480 166V180C480 183.536 481.405 186.928 483.905 189.429L494 199.524L505.314 188.21L496 178.895V166H480Z" fill="#D96D3A"/>
+  <text x="418" y="304" fill="#2F2417" font-family="Arial, sans-serif" font-size="30" font-weight="700">Recover dues faster</text>
+  <text x="418" y="336" fill="#6F614F" font-family="Arial, sans-serif" font-size="18">Send reminders, track credits, and keep every payment tied to history.</text>
+</svg>

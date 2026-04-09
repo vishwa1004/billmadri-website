@@ -1,0 +1,20 @@
+<svg width="720" height="520" viewBox="0 0 720 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="720" height="520" rx="30" fill="#FFFDF9"/>
+  <rect x="24" y="24" width="672" height="472" rx="26" fill="#F8F2E8" stroke="#E8DECF" stroke-width="2"/>
+  <rect x="54" y="64" width="344" height="392" rx="24" fill="#FFFDF9" stroke="#E8DECF"/>
+  <text x="86" y="110" fill="#2F2417" font-family="Arial, sans-serif" font-size="30" font-weight="700">GST Bill</text>
+  <rect x="86" y="136" width="280" height="22" rx="11" fill="#EEE4D6"/>
+  <rect x="86" y="178" width="240" height="18" rx="9" fill="#F2E9DD"/>
+  <rect x="86" y="208" width="252" height="18" rx="9" fill="#F2E9DD"/>
+  <rect x="86" y="238" width="210" height="18" rx="9" fill="#F2E9DD"/>
+  <rect x="86" y="286" width="280" height="88" rx="18" fill="#FFF5EB"/>
+  <text x="108" y="328" fill="#D96D3A" font-family="Arial, sans-serif" font-size="34" font-weight="700">₹2,845</text>
+  <text x="108" y="354" fill="#6F614F" font-family="Arial, sans-serif" font-size="16">CGST + SGST included</text>
+  <rect x="444" y="106" width="220" height="92" rx="22" fill="#2F2417"/>
+  <text x="476" y="142" fill="#DCC8AF" font-family="Arial, sans-serif" font-size="14" letter-spacing="1.4">SHARE BILL</text>
+  <rect x="476" y="156" width="156" height="20" rx="10" fill="#4B392B"/>
+  <circle cx="510" cy="288" r="66" fill="#E2F0E9"/>
+  <path d="M509 258C494.641 258 483 269.641 483 284C483 298.359 494.641 310 509 310C523.359 310 535 298.359 535 284C535 269.641 523.359 258 509 258ZM522.75 274.813L506.313 291.25C505.286 292.277 503.622 292.277 502.595 291.25L495.25 283.905L499.061 280.094L504.454 285.487L518.939 271.002L522.75 274.813Z" fill="#346B57"/>
+  <text x="588" y="284" fill="#2F2417" font-family="Arial, sans-serif" font-size="24" font-weight="700">Create online</text>
+  <text x="588" y="314" fill="#6F614F" font-family="Arial, sans-serif" font-size="18">Share instantly with customers</text>
+</svg>

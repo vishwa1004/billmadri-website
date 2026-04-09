@@ -1,0 +1,17 @@
+<svg width="720" height="520" viewBox="0 0 720 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="720" height="520" rx="30" fill="#FFFDF9"/>
+  <rect x="24" y="24" width="672" height="472" rx="26" fill="#F8F2E8" stroke="#E8DECF" stroke-width="2"/>
+  <rect x="60" y="78" width="600" height="84" rx="24" fill="#FFFDF9" stroke="#E8DECF"/>
+  <text x="92" y="128" fill="#2F2417" font-family="Arial, sans-serif" font-size="30" font-weight="700">Inventory &amp; Low Stock</text>
+  <rect x="60" y="194" width="286" height="252" rx="24" fill="#FFFDF9" stroke="#E8DECF"/>
+  <rect x="374" y="194" width="286" height="252" rx="24" fill="#2F2417"/>
+  <rect x="94" y="236" width="218" height="34" rx="12" fill="#F2E9DD"/>
+  <rect x="94" y="290" width="218" height="34" rx="12" fill="#F2E9DD"/>
+  <rect x="94" y="344" width="218" height="34" rx="12" fill="#F9E9DD"/>
+  <circle cx="118" cy="361" r="8" fill="#D96D3A"/>
+  <text x="394" y="246" fill="#DCC8AF" font-family="Arial, sans-serif" font-size="14" letter-spacing="1.3">LOW STOCK ALERT</text>
+  <text x="394" y="292" fill="#FFF7EF" font-family="Arial, sans-serif" font-size="36" font-weight="700">3 items</text>
+  <rect x="394" y="326" width="246" height="74" rx="18" fill="#4B392B"/>
+  <text x="418" y="356" fill="#FFF7EF" font-family="Arial, sans-serif" font-size="20" font-weight="700">Cotton Shirt - Blue</text>
+  <text x="418" y="382" fill="#DCC8AF" font-family="Arial, sans-serif" font-size="16">Only 4 left in stock</text>
+</svg>
