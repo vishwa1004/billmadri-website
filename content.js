@@ -1,5 +1,5 @@
 window.websiteContent = {
-  apiBaseUrl: 'http://localhost:5002/api',
+  apiBaseUrl: 'http://13.235.246.214:5000/api',
   contact: {
     email: 'sales@samagraPay.app',
     supportEmail: 'support@samagraPay.app',
