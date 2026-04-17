@@ -1,8 +1,8 @@
 window.websiteContent = {
   apiBaseUrl: 'http://localhost:5002/api',
   contact: {
-    email: 'sales@lekha.app',
-    supportEmail: 'support@lekha.app',
+    email: 'sales@samagraPay.app',
+    supportEmail: 'support@samagraPay.app',
     phone: '+91 9538301004',
     address: 'Athani, Karnataka, India',
   },
@@ -24,15 +24,19 @@ window.websiteContent = {
       ],
     },
     {
-      title: 'What Lekha provides',
+      title: 'What samagraPay provides',
       tone: 'accent',
       items: [
         'Create GST bills online and share with customers',
         'GST filing made simpler and faster',
         'Send payment reminders to recover dues',
+        'Role based access control and multi-branch management',
         'Customer credits with full history',
+        'Send transaction messages on WhatsApp',
+        'Send Payent reminders on WhatsApp',
         'Multi-device, multi-user, multi-shop operations',
         'Return orders and stock adjustment flow',
+        'Refer and earn program',
         'Business dashboard, cash flow tracking, financial reports',
       ],
     },
@@ -75,6 +79,34 @@ window.websiteContent = {
       chips: ['Dashboard', 'Cash Flow', 'Financial Reports'],
     },
   ],
+  freelancerProgram: {
+    title: 'Join us as a Sales Executive',
+    subtitle: 'Share samagraPay with business owners and earn commission on successful leads.',
+    intro: 'The more successful leads you bring in, the higher your commission tier becomes.',
+    tiers: [
+      {
+        range: '0 to 4 successful leads',
+        rate: '10% commission',
+        note: 'A simple starting slab for new partners.',
+      },
+      {
+        range: '5 to 8 successful leads',
+        rate: '15% commission',
+        note: 'Earn more as your monthly conversions grow.',
+        featured: true,
+      },
+      {
+        range: 'More than 8 successful leads',
+        rate: '25% commission',
+        note: 'Top-tier commission for strong performers.',
+      },
+    ],
+    steps: [
+      'Submit your details using the application form.',
+      'Our super admin reviews the request offline.',
+      'We contact you if the profile is a fit.',
+    ],
+  },
   modules: [
     'Business Dashboard',
     'GST Billing',

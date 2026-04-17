@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lekha | Retail Billing Cloud</title>
+    <title>samagraPay | Retail Billing Cloud</title>
     <meta
       name="description"
-      content="Lekha is a retail billing platform with POS, inventory, branch controls, multilingual workflows, and invoice-linked due collections."
+      content="samagraPay is a retail billing platform with POS, inventory, branch controls, multilingual workflows, and invoice-linked due collections."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -25,7 +25,7 @@
           <div class="brand">
             <div class="brand-mark">L</div>
             <div>
-              <p class="brand-title">Lekha</p>
+              <p class="brand-title">samagraPay</p>
               <p class="brand-subtitle">Retail Billing Cloud</p>
             </div>
           </div>
@@ -51,6 +51,9 @@
               <button class="ghost-button" type="button" data-scroll-target="visual-feature-grid">
                 Explore Features
               </button>
+              <button class="ghost-button" type="button" data-scroll-target="freelancer-program">
+                Join as Sales Executive
+              </button>
             </div>
             <div class="hero-stats" id="hero-stats"></div>
           </div>
@@ -58,7 +61,7 @@
           <div class="hero-panel">
             <div class="hero-visual">
               <div class="hero-visual-badge">For retail counters, back office, and branch owners</div>
-              <img class="hero-image" src="./assets/hero-dashboard.svg" alt="Lekha dashboard, billing, and branch-control interface" />
+              <img class="hero-image" src="./assets/hero-dashboard.svg" alt="samagraPay dashboard, billing, and branch-control interface" />
               <div class="floating-note floating-note--top">
                 <strong>Fast checkout</strong>
                 <span>Products, tax, and payment mode in one simple flow.</span>
@@ -74,7 +77,7 @@
         <section class="container section compare-section">
           <div class="section-heading centered compact">
             <p class="eyebrow">Why It Stands Out</p>
-            <h2>Most billing apps stop at invoices. Lekha continues into real retail operations.</h2>
+            <h2>Most billing apps stop at invoices. samagraPay continues into real retail operations.</h2>
           </div>
           <div class="compare-grid" id="compare-grid"></div>
         </section>
@@ -112,6 +115,31 @@
             <h2>Core retail workflows without unnecessary screens.</h2>
           </div>
           <div class="module-grid" id="module-grid"></div>
+        </section>
+
+        <section class="container section freelancer-section" id="freelancer-program">
+          <div class="section-heading centered compact">
+            <p class="eyebrow">Sales Executive Program</p>
+            <h2>Work with samagraPay and earn commission on successful leads.</h2>
+            <p>
+              Bring us retailers who need billing, stock, or due-management software. We review every application offline and get in touch after screening.
+            </p>
+          </div>
+          <div class="freelancer-grid" id="freelancer-grid"></div>
+          <div class="freelancer-panel reveal-up">
+            <div>
+              <p class="eyebrow">How it works</p>
+              <h3>Simple slabs, clear expectations, and a neat review process.</h3>
+              <p id="freelancer-intro"></p>
+              <ol class="freelancer-steps" id="freelancer-steps"></ol>
+            </div>
+            <div class="freelancer-panel-actions">
+              <button class="primary-button" type="button" data-open-modal="freelancer-modal">
+                Apply Now
+              </button>
+              <p class="freelancer-note">Fill in your details and our super admin will review the request offline.</p>
+            </div>
+          </div>
         </section>
 
         <!-- <section class="container section">
@@ -186,10 +214,39 @@
 
       <footer class="site-footer">
         <div class="container footer-content">
-          <p>© 2026 Lekha. Built for growing retail teams.</p>
+          <p>© 2026 samagraPay. Built for growing retail teams.</p>
           <div class="footer-links" id="footer-links"></div>
         </div>
       </footer>
+    </div>
+
+    <div class="modal-backdrop" id="freelancer-modal" aria-hidden="true" hidden>
+      <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="freelancer-modal-title">
+        <div class="modal-header">
+          <div>
+            <p class="eyebrow">Sales Executive Application</p>
+            <h2 id="freelancer-modal-title">Apply to join samagraPay</h2>
+          </div>
+          <button class="modal-close" type="button" data-close-modal aria-label="Close modal">×</button>
+        </div>
+
+          <form class="modal-form" id="freelancer-form">
+            <label>
+              <span>Full Name</span>
+              <input type="text" name="fullName" placeholder="Your full name" required autocomplete="name" minlength="2" maxlength="80" />
+            </label>
+            <label>
+              <span>Contact Number</span>
+              <input type="tel" name="contactNumber" placeholder="10-digit mobile number" required autocomplete="tel" inputmode="tel" minlength="10" maxlength="15" />
+            </label>
+            <label class="full-width">
+              <span>Address</span>
+              <textarea name="address" rows="4" placeholder="Your address" required maxlength="250"></textarea>
+            </label>
+          <button class="primary-button full-width" type="submit" id="freelancer-submit">Submit Application</button>
+          <p class="form-status full-width" id="freelancer-status"></p>
+        </form>
+      </div>
     </div>
 
     <script src="./content.js"></script>

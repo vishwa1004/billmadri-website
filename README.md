@@ -1,6 +1,6 @@
-# Lekha Website
+# samagraPay Website
 
-This folder contains the standalone public marketing website for Lekha.
+This folder contains the standalone public marketing website for samagraPay.
 
 ## What it is
 

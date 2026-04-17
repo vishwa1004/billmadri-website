@@ -13,6 +13,26 @@ const createTag = (tagName, className, text) => {
   return element;
 };
 
+const normalizeText = (value) => String(value || '').trim().replace(/\s+/g, ' ');
+
+const isValidFullName = (value) => {
+  const text = normalizeText(value);
+  return text.length >= 2 && /^[A-Za-zÀ-ÖØ-öø-ÿ][A-Za-zÀ-ÖØ-öø-ÿ\s.'-]{1,79}$/.test(text);
+};
+
+const normalizePhone = (value) => String(value || '').trim().replace(/[()\s-]/g, '');
+
+const isValidPhoneNumber = (value) => {
+  const phone = normalizePhone(value);
+  return /^\+?[0-9]{10,15}$/.test(phone);
+};
+
+const setFormStatus = (statusEl, message, tone = '') => {
+  if (!statusEl) return;
+  statusEl.textContent = message;
+  statusEl.className = `form-status${tone ? ` ${tone}` : ''}`;
+};
+
 const renderHeroStats = () => {
   const container = byId('hero-stats');
   if (!container) return;
@@ -75,6 +95,29 @@ const renderModules = () => {
   });
 };
 
+const renderFreelancerProgram = () => {
+  const grid = byId('freelancer-grid');
+  const intro = byId('freelancer-intro');
+  const steps = byId('freelancer-steps');
+  if (!grid || !intro || !steps) return;
+
+  grid.innerHTML = '';
+  steps.innerHTML = '';
+  intro.textContent = websiteContent.freelancerProgram.intro;
+
+  websiteContent.freelancerProgram.tiers.forEach((tier) => {
+    const card = createTag('article', `freelancer-card reveal-up${tier.featured ? ' freelancer-card--featured' : ''}`);
+    card.append(createTag('h3', '', tier.range));
+    card.append(createTag('p', 'rate', tier.rate));
+    card.append(createTag('p', '', tier.note));
+    grid.append(card);
+  });
+
+  websiteContent.freelancerProgram.steps.forEach((step, index) => {
+    steps.append(createTag('li', '', step || `Step ${index + 1}`));
+  });
+};
+
 const renderPricing = () => {
   const container = byId('pricing-grid');
   const select = byId('plan-interest');
@@ -110,9 +153,7 @@ const renderPricing = () => {
       scrollToTarget('demo-request');
     });
     card.append(button);
-
     container.append(card);
-
     const option = createTag('option', '', plan.name);
     option.value = plan.name;
     select.append(option);
@@ -147,6 +188,29 @@ const renderContact = () => {
   supportLink.href = `mailto:${websiteContent.contact.supportEmail}`;
   footer.append(supportLink);
   footer.append(createTag('span', '', websiteContent.contact.phone));
+};
+
+const openFreelancerModal = () => {
+  const modal = byId('freelancer-modal');
+  if (!modal) return;
+  const status = byId('freelancer-status');
+  if (status) {
+    status.textContent = '';
+    status.className = 'form-status';
+  }
+  modal.hidden = false;
+  modal.classList.add('is-open');
+  const firstField = modal.querySelector('input, textarea, button');
+  if (firstField instanceof HTMLElement) {
+    firstField.focus();
+  }
+};
+
+const closeFreelancerModal = () => {
+  const modal = byId('freelancer-modal');
+  if (!modal) return;
+  modal.classList.remove('is-open');
+  modal.hidden = true;
 };
 
 const bindScrollButtons = () => {
@@ -223,12 +287,111 @@ const bindForm = () => {
   });
 };
 
+const bindFreelancerModal = () => {
+  document.querySelectorAll('[data-open-modal="freelancer-modal"]').forEach((button) => {
+    button.addEventListener('click', openFreelancerModal);
+  });
+
+  document.querySelectorAll('[data-close-modal]').forEach((button) => {
+    button.addEventListener('click', closeFreelancerModal);
+  });
+
+  const modal = byId('freelancer-modal');
+  if (modal) {
+    modal.addEventListener('click', (event) => {
+      if (event.target === modal) {
+        closeFreelancerModal();
+      }
+    });
+  }
+
+  window.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      closeFreelancerModal();
+    }
+  });
+};
+
+const bindFreelancerForm = () => {
+  const form = byId('freelancer-form');
+  const status = byId('freelancer-status');
+  const submitButton = byId('freelancer-submit');
+  if (!form || !status || !submitButton) return;
+
+  form.addEventListener('submit', async (event) => {
+    event.preventDefault();
+
+    const formData = Object.fromEntries(new FormData(form).entries());
+    const fullName = normalizeText(formData.fullName);
+    const contactNumber = normalizeText(formData.contactNumber);
+    const address = normalizeText(formData.address);
+
+    const errors = [];
+    if (!fullName) {
+      errors.push('Full name is required.');
+    } else if (!isValidFullName(fullName)) {
+      errors.push('Enter a valid full name.');
+    }
+    if (!contactNumber) {
+      errors.push('Contact number is required.');
+    } else if (!isValidPhoneNumber(contactNumber)) {
+      errors.push('Enter a valid contact number.');
+    }
+    if (!address) {
+      errors.push('Address is required.');
+    }
+
+    if (errors.length) {
+      setFormStatus(status, errors.join(' '), 'error');
+      return;
+    }
+
+    submitButton.disabled = true;
+    submitButton.textContent = 'Submitting application...';
+    setFormStatus(status, '', '');
+
+    try {
+      const response = await fetch(`${websiteContent.apiBaseUrl}/freelancer-applications`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          fullName,
+          contactNumber: normalizePhone(contactNumber),
+          address,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.message || 'We could not submit your application right now.');
+      }
+
+      form.reset();
+      setFormStatus(status, data.message || 'Application received successfully.', 'success');
+      setTimeout(() => {
+        closeFreelancerModal();
+      }, 1200);
+    } catch (error) {
+      setFormStatus(status, error.message, 'error');
+    } finally {
+      submitButton.disabled = false;
+      submitButton.textContent = 'Submit Application';
+    }
+  });
+};
+
 renderHeroStats();
 renderComparison();
 renderVisualFeatures();
 renderModules();
+renderFreelancerProgram();
 renderPricing();
 renderContact();
 bindScrollButtons();
 bindRevealAnimations();
 bindForm();
+bindFreelancerModal();
+bindFreelancerForm();
